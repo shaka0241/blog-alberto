@@ -1,0 +1,49 @@
+{
+  "name": "paperastro",
+  "version": "2.1.0",
+  "type": "module",
+  "description": "A lightweight, professional Astro starter template styled with PaperCSS and featuring first-class Fabform integration for backend-free form handling.",
+  "author": "Geoffrey Callaghan",
+  "license": "MIT",
+  "homepage": "https://fabform.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabformhub/paperastro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabformhub/paperastro/issues"
+  },
+  "funding": {
+    "type": "service",
+    "url": "https://fabform.io"
+  },
+  "keywords": [
+    "astro",
+    "starter",
+    "template",
+    "papercss",
+    "blog",
+    "documentation",
+    "fabform",
+    "form-handling",
+    "contact-form",
+    "no-backend",
+    "form-backend",
+    "static-site",
+    "astro-theme"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.17.1",
+    "sharp": "^0.34.3"
+  }
+}
+
