@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import albertoon from '../assets/albertoon.webp';
 ---
 
 <!doctype html>
@@ -15,57 +16,45 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
     <main class="container padding-large">
 
-      <h1 class="text-center paper">Welcome to PaperAstro</h1>
-
-      <p class="paper">
-        PaperAstro is a lightweight, professional starter template built with Astro and styled
-        entirely using PaperCSS. It provides a clean, sketch‑inspired aesthetic while maintaining
-        strong performance, clarity, and simplicity.
-      </p>
-
-      <p class="paper">
-        This template is designed for developers who want a minimal, well‑structured foundation
-        for blogs, documentation sites, or small content‑driven projects. PaperAstro keeps the
-        design approachable and distinctive without adding unnecessary complexity.
-      </p>
-
-      <h2 class="paper">Features</h2>
-
-      <ul class="paper">
-        <li>Clean, minimal layout powered by Astro</li>
-        <li>Sketch‑style UI using PaperCSS</li>
-        <li>MDX support for rich content</li>
-        <li>RSS and Sitemap integrations included</li>
-        <li>Image optimization via Sharp</li>
-        <li>Built‑in form handling through Fabform.io</li>
-      </ul>
-
-      <h2 class="paper">Getting Started</h2>
-
-      <p class="paper">
-        To begin customizing this template, edit the files inside the <code>src</code> directory.
-        The structure is intentionally simple, making it easy to adapt the layout, add pages,
-        or integrate additional Astro features.
-      </p>
-
-      <ul class="paper">
-        <li>Modify this page at <code>src/pages/index.astro</code></li>
-        <li>Add new routes inside <code>src/pages/</code></li>
-        <li>Update global settings in <code>src/consts.ts</code></li>
-        <li>Extend layouts or components as needed</li>
-      </ul>
-
-      <h2 class="paper">Resources</h2>
-
-      <ul class="paper">
-        <li><a href="https://docs.astro.build/">Astro Documentation</a></li>
-        <li><a href="https://www.getpapercss.com/">PaperCSS Documentation</a></li>
-        <li><a href="https://fabform.io">Fabform.io</a> for form handling</li>
-      </ul>
+      <div class="flex align-center flex-column">
+        <img src={albertoon.src} alt="Alberto Rojas" width="150" height="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+        <h1 class="text-center paper">Alberto Rojas</h1>
+        <h3 class="text-center">Full Stack Developer | Docente | Project Manager</h3>
+      </div>
 
       <p class="paper text-center">
-        PaperAstro provides a focused, reliable starting point for your next project.
+        Soy Desarrollador Full Stack con mas de 10 años de experiencia en tecnologia, trabajando en productos digitales para retail, salud, banca y educacion.
       </p>
+
+      <p class="paper text-center" style="font-weight: bold; font-size: 1.2rem;">
+        Este blog habla sobre noticias de tecnología.
+      </p>
+
+      <div class="flex flex-wrap gap-small justify-center" style="margin: 2rem 0;">
+        <a href="https://albertorojas.netlify.app/" target="_blank" class="paper-btn btn-small">Portfolio</a>
+        <a href="https://www.linkedin.com/in/albertorojasgallegos/" target="_blank" class="paper-btn btn-small">LinkedIn</a>
+        <a href="https://github.com/shaka0241/" target="_blank" class="paper-btn btn-small">GitHub</a>
+        <a href="mailto:alberto.erg87@gmail.com" class="paper-btn btn-small">Email</a>
+      </div>
+
+      <h2 class="paper">Sobre mi</h2>
+      <ul class="paper">
+        <li>+10 años en tecnologia (desde 2013)</li>
+        <li>Experiencia en Cognizant, 2Brains, Acid Labs, VASS y Smartjob</li>
+        <li>+1000 alumnos formados como docente y mentor</li>
+        <li>Perfil mixto: ejecucion tecnica, arquitectura y liderazgo de proyectos</li>
+      </ul>
+
+
+      <h2 class="paper">Proyectos destacados</h2>
+      <ul class="paper">
+        <li><strong>Hospital Information System (HIS) - 2Brains:</strong> Angular + TypeScript para modulos hospitalarios, integracion de APIs medicas/administrativas y despliegue en GCP.</li>
+        <li><strong>DaaS (Delivery as a Service) - Acid Labs / Cencosud:</strong> Desarrollo de micro frontends para logistica de ultima milla. 108 despliegues en produccion y rollout en 6 meses.</li>
+        <li><strong>Plataforma de Seguros - Banco de Chile / 2Brains:</strong> +43 landings en produccion, integracion de Webpay y trazabilidad de conversion con GTM.</li>
+        <li><strong>Sistema de Metricas y ETL - Smartjob:</strong> Liderazgo de sistema interno para reportes y automatizacion ETL, reduciendo costos operativos.</li>
+        <li><strong>Docencia Full Stack - CEI y Desafio Latam:</strong> Formacion en JavaScript, React, MongoDB, Supabase, Vercel, fullstack moderno, Git y flujo profesional para insercion laboral.</li>
+      </ul>
+
 
     </main>
 

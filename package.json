@@ -1,21 +1,21 @@
 {
-  "name": "paperastro",
-  "version": "2.1.0",
+  "name": "alberto-rojas-portfolio",
+  "version": "1.0.0",
   "type": "module",
-  "description": "A lightweight, professional Astro starter template styled with PaperCSS and featuring first-class Fabform integration for backend-free form handling.",
-  "author": "Geoffrey Callaghan",
+  "description": "Portafolio y blog personal de Alberto Rojas - Full Stack Developer",
+  "author": "Alberto Rojas",
   "license": "MIT",
-  "homepage": "https://fabform.io",
+  "homepage": "https://albertoblog.netlify.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabformhub/paperastro.git"
+    "url": "https://github.com/shaka0241/paperastro.git"
   },
   "bugs": {
-    "url": "https://github.com/fabformhub/paperastro/issues"
+    "url": "https://github.com/shaka0241/paperastro/issues"
   },
   "funding": {
     "type": "service",
-    "url": "https://fabform.io"
+    "url": "https://albertoblog.netlify.app"
   },
   "keywords": [
     "astro",

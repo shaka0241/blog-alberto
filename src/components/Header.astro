@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import albertoon from '../assets/albertoon.webp';
 ---
 
 <header class="paper">
@@ -8,8 +9,11 @@ import HeaderLink from './HeaderLink.astro';
     <nav class="padding-small flex align-center space-between">
 
       <!-- Navigation Links -->
-      <div class="flex gap-small">
-        <HeaderLink href="/" class="paper-btn btn-small">{SITE_TITLE}</HeaderLink>
+      <div class="flex gap-small align-center">
+        <HeaderLink href="/" class="paper-btn btn-small flex align-center" style="gap: 8px;">
+          <img src={albertoon.src} alt="Alberto Rojas" width="24" height="24" style="border-radius: 50%;" />
+          {SITE_TITLE}
+        </HeaderLink>
         <HeaderLink href="/blog" class="paper-btn btn-small">Blog</HeaderLink>
         <HeaderLink href="/about" class="paper-btn btn-small">About</HeaderLink>
         <HeaderLink href="/contact" class="paper-btn btn-small">Contact</HeaderLink>
