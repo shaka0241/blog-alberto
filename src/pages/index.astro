@@ -1,9 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import albertoon from '../assets/albertoon.webp';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <!doctype html>
@@ -11,50 +17,67 @@ import albertoon from '../assets/albertoon.webp';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
+
   <body>
     <Header />
 
     <main class="container padding-large">
 
-      <div class="flex align-center flex-column">
-        <img src={albertoon.src} alt="Alberto Rojas" width="150" height="150" style="border-radius: 50%; margin-bottom: 1rem;" />
-        <h1 class="text-center paper">Alberto Rojas</h1>
-        <h3 class="text-center">Full Stack Developer | Docente | Project Manager</h3>
-      </div>
+      <h1 class="paper text-center">
+        <span class="inline-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+            <line x1="7" y1="8" x2="17" y2="8" />
+            <line x1="7" y1="12" x2="17" y2="12" />
+            <line x1="7" y1="16" x2="13" y2="16" />
+          </svg>
+        </span>
+        The Papery Blog Roll
+      </h1>
 
       <p class="paper text-center">
-        Soy Desarrollador Full Stack con mas de 10 años de experiencia en tecnologia, trabajando en productos digitales para retail, salud, banca y educacion.
+        Welcome to the official archive of all things scribbled, doodled, typed,
+        or accidentally published. Each post below has been lovingly handcrafted
+        using Astro and PaperCSS, then pinned to this digital bulletin board for
+        your reading pleasure.
       </p>
 
-      <p class="paper text-center" style="font-weight: bold; font-size: 1.2rem;">
-        Este blog habla sobre noticias de tecnología.
+      <section class="margin-top-large">
+        <ul class="flex flex-wrap gap-large no-bullet justify-center">
+          {
+            posts.map((post) => (
+              <li class="paper padding-small" style="width: 100%; max-width: 420px;">
+                <a href={`/blog/${post.id}/`} class="no-decoration">
+                  {post.data.heroImage && (
+                    <Image
+                      width={720}
+                      height={360}
+                      src={post.data.heroImage}
+                      alt=""
+                      class="img-responsive paper margin-bottom-small"
+                    />
+                  )}
+
+                  <h4 class="margin-none">{post.data.title}</h4>
+
+                  <p class="italic margin-none">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <p class="paper text-center margin-top-large">
+        <span class="inline-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 19h14M5 5h14M5 12h8" />
+          </svg>
+        </span>
+        That’s all for now. More papery posts are already scribbled in the margins.
       </p>
-
-      <div class="flex flex-wrap gap-small justify-center" style="margin: 2rem 0;">
-        <a href="https://albertorojas.netlify.app/" target="_blank" class="paper-btn btn-small">Portfolio</a>
-        <a href="https://www.linkedin.com/in/albertorojasgallegos/" target="_blank" class="paper-btn btn-small">LinkedIn</a>
-        <a href="https://github.com/shaka0241/" target="_blank" class="paper-btn btn-small">GitHub</a>
-        <a href="mailto:alberto.erg87@gmail.com" class="paper-btn btn-small">Email</a>
-      </div>
-
-      <h2 class="paper">Sobre mi</h2>
-      <ul class="paper">
-        <li>+10 años en tecnologia (desde 2013)</li>
-        <li>Experiencia en Cognizant, 2Brains, Acid Labs, VASS y Smartjob</li>
-        <li>+1000 alumnos formados como docente y mentor</li>
-        <li>Perfil mixto: ejecucion tecnica, arquitectura y liderazgo de proyectos</li>
-      </ul>
-
-
-      <h2 class="paper">Proyectos destacados</h2>
-      <ul class="paper">
-        <li><strong>Hospital Information System (HIS) - 2Brains:</strong> Angular + TypeScript para modulos hospitalarios, integracion de APIs medicas/administrativas y despliegue en GCP.</li>
-        <li><strong>DaaS (Delivery as a Service) - Acid Labs / Cencosud:</strong> Desarrollo de micro frontends para logistica de ultima milla. 108 despliegues en produccion y rollout en 6 meses.</li>
-        <li><strong>Plataforma de Seguros - Banco de Chile / 2Brains:</strong> +43 landings en produccion, integracion de Webpay y trazabilidad de conversion con GTM.</li>
-        <li><strong>Sistema de Metricas y ETL - Smartjob:</strong> Liderazgo de sistema interno para reportes y automatizacion ETL, reduciendo costos operativos.</li>
-        <li><strong>Docencia Full Stack - CEI y Desafio Latam:</strong> Formacion en JavaScript, React, MongoDB, Supabase, Vercel, fullstack moderno, Git y flujo profesional para insercion laboral.</li>
-      </ul>
-
 
     </main>
 
