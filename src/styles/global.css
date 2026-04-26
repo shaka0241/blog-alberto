@@ -1,0 +1,28 @@
+/* Global Responsive Overrides for PaperCSS */
+
+@media (max-width: 768px) {
+  /* Reduce excessive container padding on mobile */
+  .container.padding-large {
+    padding: 1.5rem !important;
+  }
+  
+  /* Reduce margin on main sections */
+  .margin-top-large {
+    margin-top: 1.5rem !important;
+  }
+  
+  .margin-bottom-large {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Ensure paper elements don't squeeze content too much */
+  .paper.padding-large {
+    padding: 1.5rem !important;
+  }
+  
+  /* Prevent images from overflowing their container */
+  img.img-responsive {
+    max-width: 100%;
+    height: auto;
+  }
+}

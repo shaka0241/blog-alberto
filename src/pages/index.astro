@@ -43,7 +43,7 @@ const posts = (await getCollection('blog')).sort(
       </p>
 
       <section class="margin-top-large">
-        <ul class="no-bullet" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 0; margin: 0;">
+        <ul class="no-bullet" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 2rem; padding: 0; margin: 0;">
           {
             posts.map((post) => (
               <li class="paper padding-small" style="display: flex; flex-direction: column; height: 100%;">
