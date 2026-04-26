@@ -1,5 +1,6 @@
 ---
 title: "TechCrunch Mobility: Elon’s admission"
+description: "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation...."
 pubDate: "2026-04-26T16:03:00.000Z"
 author: "Kirsten Korosec"
 tags: ["tech", "news", "automatizacion"]
