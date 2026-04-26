@@ -9,12 +9,12 @@ import albertoon from '../assets/albertoon.webp';
     <nav class="padding-small flex align-center space-between">
 
       <!-- Navigation Links -->
-      <div class="flex gap-small align-center">
-        <HeaderLink href="/" class="paper-btn btn-small" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 50px; margin: 0;">
+      <div class="flex gap-small align-center" style="display: flex; flex-direction: row; align-items: center;">
+        <HeaderLink href="/" class="paper-btn btn-small" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; margin: 0; vertical-align: middle;">
           <img src={albertoon.src} alt="Alberto Rojas" width="24" height="24" style="border-radius: 50%;" />
           Blog
         </HeaderLink>
-        <HeaderLink href="/about" class="paper-btn btn-small" style="display: flex; align-items: center; justify-content: center; height: 50px; margin: 0;">
+        <HeaderLink href="/about" class="paper-btn btn-small" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; margin: 0; vertical-align: middle;">
           About me
         </HeaderLink>
       </div>
