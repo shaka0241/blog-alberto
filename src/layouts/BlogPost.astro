@@ -1,12 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
@@ -21,18 +21,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
     <main class="container padding-large">
       <article class="paper">
-
         <!-- Hero Image -->
         <div class="hero-image margin-bottom-large">
-          {heroImage && (
-            <Image
-              width={1020}
-              height={510}
-              src={heroImage}
-              alt={title}
-              class="img-responsive paper"
-            />
-          )}
+          {
+            heroImage && (
+              <Image
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt={title}
+                class="img-responsive paper"
+              />
+            )
+          }
         </div>
 
         <!-- Title + Dates -->
@@ -40,15 +41,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           <h1 class="paper">{title}</h1>
 
           <p class="paper">
-            Published on <FormattedDate date={pubDate} />
-            {updatedDate && (
-              <>
-                <br />
-                <span class="italic">
-                  Last updated on <FormattedDate date={updatedDate} />
-                </span>
-              </>
-            )}
+            Publicado el <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <>
+                  <br />
+                  <span class="italic">
+                    Actualizado el <FormattedDate date={updatedDate} />
+                  </span>
+                </>
+              )
+            }
           </p>
 
           <hr />
@@ -61,13 +64,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
         <!-- Footer Note -->
         <p class="text-center margin-top-large paper">
-          Thank you for reading. This article is part of the PaperAstro starter template.
+          Gracias por leer. Nos vemos en el siguiente artículo. Y no olvides
+          compartir este artículo.
         </p>
-
       </article>
     </main>
 
     <Footer />
   </body>
 </html>
-
