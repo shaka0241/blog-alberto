@@ -2,7 +2,7 @@
 title: "Tim Cook cede el mando: John Ternus es el nuevo CEO de Apple"
 description: "El cambio de liderazgo que marca una nueva era en Cupertino. Tim Cook pasará a ser presidente."
 pubDate: 2026-04-26
-heroImage: "../../assets/apple-ceo.jpg"
+heroImage: "../../assets/apple_ceo_handdrawn.png"
 ---
 
 Hoy ha saltado una de las noticias más importantes de la década en el mundo de la tecnología: **Apple ha anunciado que Tim Cook dejará su puesto como CEO** para hacer una transición al rol de presidente de la junta directiva (Chairman). A partir del 1 de septiembre de 2026, **John Ternus**, quien ha liderado el área de ingeniería de hardware de la compañía, asumirá el cargo de Director Ejecutivo.
