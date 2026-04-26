@@ -43,10 +43,10 @@ const posts = (await getCollection('blog')).sort(
       </p>
 
       <section class="margin-top-large">
-        <ul class="flex flex-wrap gap-large no-bullet justify-center">
+        <ul class="no-bullet" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 0; margin: 0;">
           {
             posts.map((post) => (
-              <li class="paper padding-small" style="width: 100%; max-width: 420px;">
+              <li class="paper padding-small" style="display: flex; flex-direction: column; height: 100%;">
                 <a href={`/blog/${post.id}/`} class="no-decoration">
                   {post.data.heroImage && (
                     <Image
