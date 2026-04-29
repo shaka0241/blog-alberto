@@ -1,4 +1,7 @@
 /* Global Responsive Overrides for PaperCSS */
+a {
+  background-image: none !important;
+}
 
 @media (max-width: 768px) {
   /* Reduce excessive container padding on mobile */
